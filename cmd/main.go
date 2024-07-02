@@ -8,11 +8,6 @@ import (
 
 // At the root, go run ./cmd <Arg>
 func main() {
-	if len(os.Args) > 1 {
-		// os.Args[0] is the programme name
-		fmt.Println(hello.Say(os.Args[1]))
-	} else {
-		fmt.Println(hello.Say("World!"))
-	}
+	fmt.Println(hello.Say(os.Args[1:]))
 
 }
